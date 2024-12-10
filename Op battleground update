@@ -1,0 +1,401 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "OP BATTLEGROUND",
+   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   LoadingTitle = "OP BATTLEGROUND SCRIPT",
+   LoadingSubtitle = "by Toledo_channels",
+   Theme = "Green", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "OP FUCKROUND"
+   },
+
+   Discord = {
+      Enabled = true, -- Prompt the user to join your Discord server if their executor supports it
+      Invite = "k8msfHmV", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Key System",
+      Note = "No method of obtaining the key is provided", -- Use this to tell the user how to get a key
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+Rayfield:Notify({
+   Title = "Join our discord For Updates",
+   Content = "https://discord.gg/k8msfHmV",
+   Duration = 5,
+   Image = 4483362458,
+})
+
+local Tab = Window:CreateTab("Main", 4483362458) -- Title, Image
+
+local Button = Tab:CreateButton({
+   Name = "Esp",
+   Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Lucasfin000/SpaceHub/main/UESP'))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Inf jump",
+   Callback = function()
+local InfiniteJumpEnabled = true
+game:GetService("UserInputService").JumpRequest:connect(function()
+	if InfiniteJumpEnabled then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
+end)
+   end,
+})
+
+local Tab = Window:CreateTab("Characters", 4483362458) -- Title, Image
+
+local Section = Tab:CreateSection("Gojo",false) -- The 2nd argument is to tell if its only a Title and doesnt contain element
+
+local Button = Tab:CreateButton({
+    Name = "Hollow Purple Max",
+    Interact = 'Click',
+    Callback = function()
+    local args = {
+     [1] = "Hollow"
+ }
+
+ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Gojo"):FireServer(unpack(args))
+    end,
+ })
+
+local Button = Tab:CreateButton({
+    Name = "Purple 50%",
+    Interact = 'Click',
+    Callback = function()
+    local args = {
+     [1] = "HollowPurple"
+ }
+ 
+ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Gojo"):FireServer(unpack(args))
+    end,
+ })
+
+local Button = Tab:CreateButton({
+   Name = "Blue",
+   Interact = 'Click',
+   Callback = function()
+   local args = {
+    [1] = "Blue"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Gojo"):FireServer(unpack(args))
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Red",
+   Interact = 'Click',
+   Callback = function()
+   local args = {
+    [1] = "Red"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Gojo"):FireServer(unpack(args))
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Martial Combo",
+   Interact = 'Click',
+   Callback = function()
+   local args = {
+    [1] = "Barrage"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Gojo"):FireServer(unpack(args))
+   end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Infinity Combo",
+    Interact = 'Click',
+    Callback = function()
+    local args = {
+     [1] = "Hora"
+ }
+ 
+ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Gojo"):FireServer(unpack(args))
+    end,
+ })
+
+local Button = Tab:CreateButton({
+    Name = "MaxBlue",
+    Interact = 'Click',
+    Callback = function()
+    local args = {
+     [1] = "MaxBlue"
+ }
+ 
+ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Gojo"):FireServer(unpack(args))
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "MaxRed",
+    Interact = 'Click',
+    Callback = function()
+    local args = {
+     [1] = "MaxRed"
+ }
+ 
+ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Gojo"):FireServer(unpack(args))
+    end,
+ })
+
+local Button = Tab:CreateButton({
+    Name = "Gojo Domain Expansion",
+    Interact = 'Click',
+    Callback = function()
+    local args = {
+     [1] = "TrueDomain"
+ }
+ 
+ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Gojo"):FireServer(unpack(args))
+    end,
+ })
+
+local Section = Tab:CreateSection("Yuji",false) -- The 2nd argument is to tell if its only a Title and doesnt contain element
+
+local Button = Tab:CreateButton({
+    Name = "Divergent Fist",
+    Interact = 'Click',
+    Callback = function()
+    local args = {
+     [1] = "Divergent"
+ }
+ 
+ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Yuji"):FireServer(unpack(args))
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Cranium Impact",
+    Interact = 'Click',
+    Callback = function()
+    local args = {
+     [1] = "Cranium"
+ }
+ 
+ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Yuji"):FireServer(unpack(args))
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Black Flash",
+    Interact = 'Click',
+    Callback = function()
+    local args = {
+     [1] = "Black"
+ }
+ 
+ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Yuji"):FireServer(unpack(args))
+    end,
+ })
+
+local Button = Tab:CreateButton({
+    Name = "Manji Kick",
+    Interact = 'Click',
+    Callback = function()
+    local args = {
+     [1] = "Manji"
+ }
+ 
+ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Yuji"):FireServer(unpack(args))
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Cleave",
+    Interact = 'Click',
+    Callback = function()
+    local args = {
+     [1] = "Cleave"
+ }
+ 
+ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Yuji"):FireServer(unpack(args))
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Dismantle",
+    Interact = 'Click',
+    Callback = function()
+    local args = {
+     [1] = "Dismantle"
+ }
+ 
+ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Yuji"):FireServer(unpack(args))
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Fire Arrow",
+    Interact = 'Click',
+    Callback = function()
+    local args = {
+     [1] = "FireArrow"
+ }
+ 
+ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Yuji"):FireServer(unpack(args))
+    end,
+ })
+
+local Button = Tab:CreateButton({
+    Name = "Yuji Domain Expansion",
+    Interact = 'Click',
+    Callback = function()
+    local args = {
+     [1] = "TrueDomain"
+ }
+ 
+ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Yuji"):FireServer(unpack(args))
+    end,
+ })
+
+ local Tab = Window:CreateTab("Admin Characters", 4483362458) -- Title, Image
+
+local Section = Tab:CreateSection("Yuta",false) -- The 2nd argument is to tell if its only a Title and doesnt contain element
+
+local Button = Tab:CreateButton({
+    Name = "Pure Love",
+    Interact = 'Click',
+    Callback = function()
+    local args = {
+     [1] = "PureLove"
+ }
+ 
+ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Yuta"):FireServer(unpack(args))
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Strike",
+    Interact = 'Click',
+    Callback = function()
+    local args = {
+     [1] = "Strike"
+ }
+ 
+ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Yuta"):FireServer(unpack(args))
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Shine",
+    Interact = 'Click',
+    Callback = function()
+    local args = {
+     [1] = "Shine"
+ }
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Yuta"):FireServer(unpack(args))
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Heal",
+    Interact = 'Click',
+    Callback = function()
+    local args = {
+     [1] = "Heal"
+ }
+ 
+ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Yuta"):FireServer(unpack(args))
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Rampage",
+    Interact = 'Click',
+    Callback = function()
+    local args = {
+     [1] = "Rampage"
+ }
+ 
+ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Yuta"):FireServer(unpack(args))
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Awaken Anims",
+    Interact = 'Click',
+    Callback = function()
+    local args = {
+     [1] = "Awaken"
+ }
+ 
+ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Yuta"):FireServer(unpack(args))
+    end,
+ })
+
+local Tab = Window:CreateTab("Misc", 4483362458) -- Title, Image
+
+local Button = Tab:CreateButton({
+   Name = "NoCD",
+   Interact = 'Click',
+   Callback = function()
+   game.Players.LocalPlayer.NoCD.Value = true
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "NoDashCD",
+   Interact = 'Click',
+   Callback = function()
+   game.Players.LocalPlayer.NoDashCD.Value = true
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "NoStunCD",
+   Interact = 'Click',
+   Callback = function()
+   game.Players.LocalPlayer.NoStunCD.Value = true
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Early Access",
+   Interact = 'Click',
+   Callback = function()
+   game.Players.LocalPlayer.EarlyAccess.Value = true
+   end,
+})
+
+local Tab = Window:CreateTab("Cridets", 4483362458) -- Title, Image
+
+local Button = Tab:CreateButton({
+   Name = "Toledo_channels",
+   Interact = 'Click',
+   Callback = function()
+
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "RABBID BOJO",
+   Interact = 'Click',
+   Callback = function()
+
+   end,
+})
